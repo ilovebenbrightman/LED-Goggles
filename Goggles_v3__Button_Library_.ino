@@ -1,7 +1,7 @@
 #include <FastLED.h>
 #include <Button.h>
 #define NUM_LEDS 32
-#define DATA_PIN 11
+#define DATA_PIN 13  // This used to be PIN 11, moving to PIN 13 to standardize all my projects
 #define COLOR_ORDER GRB
 #define divisor 3
 #define brightness 10
@@ -11,10 +11,10 @@ struct CRGB leds[NUM_LEDS];
 int brainwave = 0;
 int brainwaves[] = {1000, 800, 166, 125, 100, 77, 56, 40, 25, 14, 4};
 
-Button freqButton = Button(1,PULLUP);
+Button freqButton = Button(1,PULLUP);   // One Of TheSE BuTToNS is MOVING to Pin 3
 int freqMode = 0;
 
-Button colorButton = Button(0,PULLUP);
+Button colorButton = Button(0,PULLUP);  // One Of TheSE BuTToNS is MOVING to Pin 3
 int colorMode = 0;
 
 // Define an offset for the left and right eye LED strips
